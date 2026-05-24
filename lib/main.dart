@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'screens/home_screen.dart';
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(const QuizMosaicApp());
+  runApp(MyApp());
 }
 
-class QuizMosaicApp extends StatelessWidget {
-  const QuizMosaicApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'QuizMosaic',
+      title: 'Quiz App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF1565C0),
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-        ),
+      home: HomeScreen(),
+      themeMode: ThemeMode.system,
+      theme: ThemeData.light().copyWith(
+        appBarTheme: const AppBarTheme(color: Colors.blue),
       ),
-      home: const HomeScreen(),
+      darkTheme: ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(color: Colors.black),
+      ),
     );
   }
 }
+
