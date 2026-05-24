@@ -1,4 +1,4 @@
-package com.generalknowledge.general_knowledge
+package com.rvctech.quizmosaic
 
 import io.flutter.embedding.android.FlutterActivity
 
