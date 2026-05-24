@@ -10,6 +10,9 @@ A Flutter-based general knowledge quiz app with multiple-choice questions across
 - **Instant Feedback** — See correct/incorrect answers after each question
 - **Progress Tracker** — Visual progress bar during the quiz
 - **Score Summary** — Results screen with percentage and pass/fail status
+- **Buy Me Coffee** — M-Pesa support (0722 555 220) via selectable text for easy copy
+- **Portrait Locked** — Orientation fixed to portrait mode
+- **Custom Launcher Icons** — Generated from the app logo using `flutter_launcher_icons`
 
 ## Screenshots
 
@@ -37,7 +40,19 @@ flutter run
 flutter build apk --debug
 ```
 
-The APK will be at `build/app/outputs/flutter-apk/app-debug.apk`.
+The APK will be at `build/app/outputs/flutter-apk/app-debug.apk` (single fat APK containing all ABIs).
+
+For a smaller release build split by architecture:
+```bash
+flutter build apk --release --split-per-abi
+```
+
+### Package Details
+
+- **App Name**: QuizMosaic
+- **Package ID**: `com.rvctech.quizmosaic`
+- **Min SDK**: 21 (Android 5.0+)
+- **Launcher Icons**: Generated from `assets/Logo.jpg` via `flutter_launcher_icons` (run `dart run flutter_launcher_icons` to regenerate)
 
 ## Project Structure
 
